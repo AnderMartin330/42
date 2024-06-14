@@ -15,5 +15,6 @@ int ft_strlen(char *str){
 
 int main(void){
     char str[] = "Hello, World!";
-    ft_strlen(str);
+    int i = ft_strlen(str);
+    printf("Longitud del String: %i\n", i);
 }
