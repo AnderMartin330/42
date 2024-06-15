@@ -1,8 +1,0 @@
-{
-    "C_Cpp.errorSquiggles": "disabled",
-    "files.associations": {
-        "regex": "c",
-        "sstream": "c",
-        "strstream": "c"
-    }
-}
