@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andemart <andemart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/19 14:09:04 by andemart          #+#    #+#             */
-/*   Updated: 2024/06/19 15:27:24 by andemart         ###   ########.fr       */
+/*   Created: 2024/06/19 12:42:18 by andemart          #+#    #+#             */
+/*   Updated: 2024/06/19 12:42:18 by andemart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
+//#include <stdio.h>
 
-char	*ft_strcpy(char *dest, char *src, unsigned int n)
+int	ft_strlen(char *str)
 {
-	unsigned int		i;
+	int	i;
 
 	i = 0;
-	while (src[i] != '\0' && n > i)
+	while (*str != '\0')
 	{
-		dest[i] = src[i];
+		str++;
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (i);
 }
 
 /*int main(void){
-    char origen[] = "Hola, Mundo!";
-    char destino[20];
-
-    printf("Origen: %s\n", origen);
-
-    ft_strcpy(destino, origen, 6);
-
-    printf("Destino: %s\n", destino);
+    char str[] = "Hello, World!";
+    int i = ft_strlen(str);
+    printf("Longitud del String: %i\n", i);
 }*/

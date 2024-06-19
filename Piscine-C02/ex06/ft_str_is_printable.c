@@ -1,38 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andemart <andemart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/19 14:09:04 by andemart          #+#    #+#             */
-/*   Updated: 2024/06/19 15:27:24 by andemart         ###   ########.fr       */
+/*   Created: 2024/06/19 16:19:34 by andemart          #+#    #+#             */
+/*   Updated: 2024/06/19 16:20:01 by andemart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*ft_strcpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int		i;
-
-	i = 0;
-	while (src[i] != '\0' && n > i)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+int ft_str_is_printable(char *str){
+    
 }
-
-/*int main(void){
-    char origen[] = "Hola, Mundo!";
-    char destino[20];
-
-    printf("Origen: %s\n", origen);
-
-    ft_strcpy(destino, origen, 6);
-
-    printf("Destino: %s\n", destino);
-}*/
