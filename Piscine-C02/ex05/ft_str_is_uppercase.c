@@ -6,15 +6,16 @@
 /*   By: andemart <andemart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 16:12:48 by andemart          #+#    #+#             */
-/*   Updated: 2024/06/19 16:17:40 by andemart         ###   ########.fr       */
+/*   Updated: 2024/06/20 16:43:25 by andemart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <unistd.h>
 //#include <stdio.h>
 
-int ft_str_is_uppercase(char *str){
-    while (*str != '\0')
+int	ft_str_is_uppercase(char *str)
+{
+	while (*str != '\0')
 	{
 		if (*str < 'A' || *str > 'Z')
 		{

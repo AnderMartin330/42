@@ -6,11 +6,11 @@
 /*   By: andemart <andemart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 14:09:04 by andemart          #+#    #+#             */
-/*   Updated: 2024/06/19 15:27:24 by andemart         ###   ########.fr       */
+/*   Updated: 2024/06/20 16:43:19 by andemart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 
 char	*ft_strcpy(char *dest, char *src, unsigned int n)
 {

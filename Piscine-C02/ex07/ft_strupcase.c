@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andemart <andemart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/19 15:29:27 by andemart          #+#    #+#             */
-/*   Updated: 2024/06/20 16:43:22 by andemart         ###   ########.fr       */
+/*   Created: 2024/06/20 10:50:34 by andemart          #+#    #+#             */
+/*   Updated: 2024/06/20 16:43:27 by andemart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 
-int	ft_str_is_alpha(char *str)
+char	*ft_strupcase(char *str)
 {
-	while (*str)
+	char	*ptr;
+
+	*ptr = str;
+	while (*ptr != '\0')
 	{
-		if (!((*str >= 'A' && *str <= 'Z') || (*str >= 'a' && *str <= 'z')))
+		if (*ptr >= 'a' && *ptr <= 'z')
 		{
-			return (0);
+			*ptr = *ptr - ('a' - 'A');
 		}
-		str++;
+		ptr++;
 	}
-	return (1);
+	return (str);
 }
 
-/*int main(void) {
-    char cadena1[] = "HolaMundo";
-    char cadena2[] = "Hola Mundo!";
-
-    printf("Cadena1: %s -> %d\n", cadena1, ft_str_is_alpha(cadena1));
-    printf("Cadena2: %s -> %d\n", cadena2, ft_str_is_alpha(cadena2));
-
-    return 0;
+/*int main() {
+	char str[] = "hola, mundo!";
+	char* upper_str = ft_strupcase(str);
+	printf("%s\n", upper_str);  // Imprime "HOLA, MUNDO!"
+	return 0;
 }*/

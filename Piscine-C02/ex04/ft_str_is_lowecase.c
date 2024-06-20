@@ -6,15 +6,16 @@
 /*   By: andemart <andemart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 16:05:37 by andemart          #+#    #+#             */
-/*   Updated: 2024/06/19 16:17:16 by andemart         ###   ########.fr       */
+/*   Updated: 2024/06/20 16:43:24 by andemart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <unistd.h>
 //#include <stdio.h>
 
-int ft_str_is_lowercase(char *str){
-    while (*str != '\0')
+int	ft_str_is_lowercase(char *str)
+{
+	while (*str != '\0')
 	{
 		if (*str < 'a' || *str > 'z')
 		{
