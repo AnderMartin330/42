@@ -6,11 +6,11 @@
 /*   By: andemart <andemart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 14:21:29 by andemart          #+#    #+#             */
-/*   Updated: 2024/06/20 16:44:22 by andemart         ###   ########.fr       */
+/*   Updated: 2024/06/21 14:02:06 by andemart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <unistd.h>
+#include <unistd.h>
 
 static	void	print_hex(int np)
 {
