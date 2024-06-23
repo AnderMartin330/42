@@ -6,7 +6,7 @@
 /*   By: andemart <andemart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 10:49:56 by andemart          #+#    #+#             */
-/*   Updated: 2024/06/20 16:43:28 by andemart         ###   ########.fr       */
+/*   Updated: 2024/06/23 15:03:15 by andemart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strlowcase(char *str)
 {
 	char	*ptr;
 
-	*ptr = str;
+	ptr = str;
 	while (*ptr != '\0')
 	{
 		if (*ptr >= 'A' && *ptr <= 'Z')

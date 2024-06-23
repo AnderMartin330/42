@@ -6,51 +6,37 @@
 /*   By: andemart <andemart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 11:47:04 by andemart          #+#    #+#             */
-/*   Updated: 2024/06/20 17:35:37 by andemart         ###   ########.fr       */
+/*   Updated: 2024/06/23 14:37:13 by andemart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int	ft_conditions(char *ptr)
-{
-	int	fl;
-
-	fl = 1;
-	if (fl)
-	{
-		if (*ptr >= 'a' && *ptr <= 'z')
-			*ptr = *ptr - ('a' - 'A');
-		fl = 0;
-	}
-	else
-	{
-		if (*ptr >= 'A' && *ptr <= 'Z')
-			*ptr = *ptr + ('a' - 'A');
-	}
-	if (*ptr == ' ' || *ptr == '\t' || *ptr == '\n')
-	{
-		if (*ptr == ',' || *ptr == '.')
-			fl = 1;
-	}
-	return (fl);
-}
+//#include <stdio.h>
 
 char	*ft_strcapitalize(char *str)
 {
-	char	*ptr;
+	unsigned int	i;
+	char			c;
+	int				new_word;
 
-	ptr = str;
-	while (*ptr != '\0')
+	i = 0;
+	new_word = 1;
+	while (str[i] != '\0')
 	{
-		ft_conditions(ptr);
-		ptr++;
+		c = str[i];
+		if (new_word == 1 && c >= 'a' && c <= 'z')
+			str[i] = str[i] - 32;
+		else if (new_word == 0 && c >= 'A' && c <= 'Z')
+			str[i] = str[i] + 32;
+		if (c < '0' || (c > '9' && c < 'A') || (c > 'Z' && c < 'a') || c > 'z')
+			new_word = 1;
+		else
+			new_word = 0;
+		i++;
 	}
 	return (str);
 }
-
 /*int main(void) {
-    char str[] = "hola, mundo! ¿como estas?"; // Ejemplo más complejo
+    char str[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
     char* capitalized_str = ft_strcapitalize(str);
     printf("%s\n", capitalized_str);  // Imprime "Hola, Mundo! ¿Como Estas?"
     return 0;

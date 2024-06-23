@@ -6,7 +6,7 @@
 /*   By: andemart <andemart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 16:05:37 by andemart          #+#    #+#             */
-/*   Updated: 2024/06/20 16:43:24 by andemart         ###   ########.fr       */
+/*   Updated: 2024/06/23 14:25:48 by andemart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ int	ft_str_is_lowercase(char *str)
     char str2[] = "ABCDEF123";
     char str3[] = "abcdef";
 
-    printf("String 1: %s - Result: %d\n", str1, ft_str_is_uppercase(str1));
-    printf("String 2: %s - Result: %d\n", str2, ft_str_is_uppercase(str2));
-    printf("String 3: %s - Result: %d\n", str3, ft_str_is_uppercase(str3));
+    printf("String 1: %s - Result: %d\n", str1, ft_str_is_lowercase(str1));
+    printf("String 2: %s - Result: %d\n", str2, ft_str_is_lowercase(str2));
+    printf("String 3: %s - Result: %d\n", str3, ft_str_is_lowercase(str3));
 
     return 0;
 }*/

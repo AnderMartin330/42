@@ -6,7 +6,7 @@
 /*   By: andemart <andemart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 15:55:18 by andemart          #+#    #+#             */
-/*   Updated: 2024/06/20 16:43:23 by andemart         ###   ########.fr       */
+/*   Updated: 2024/06/23 14:22:27 by andemart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_str_is_numeric(const char *str)
 {
 	while (*str != '\0')
 	{
-		if (!(*str < '0' || *str > '1'))
+		if (*str < '0' || *str > '9')
 		{
 			return (0);
 		}
