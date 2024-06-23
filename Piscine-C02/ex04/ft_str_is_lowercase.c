@@ -30,7 +30,7 @@ int main()
 {
     char str1[] = "ABCDEF";
     char str2[] = "ABCDEF123";
-    char str3[] = "abcdef";
+    char str3[] = "";
 
     printf("String 1: %s - Result: %d\n", str1, ft_str_is_lowercase(str1));
     printf("String 2: %s - Result: %d\n", str2, ft_str_is_lowercase(str2));
