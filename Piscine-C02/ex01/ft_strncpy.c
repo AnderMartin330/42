@@ -1,36 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andemart <andemart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/20 10:49:56 by andemart          #+#    #+#             */
-/*   Updated: 2024/06/23 15:03:15 by andemart         ###   ########.fr       */
+/*   Created: 2024/06/19 14:09:04 by andemart          #+#    #+#             */
+/*   Updated: 2024/06/23 14:20:57 by andemart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 
-char	*ft_strlowcase(char *str)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	char	*ptr;
+	unsigned int		i;
 
-	ptr = str;
-	while (*ptr != '\0')
+	i = 0;
+	while (src[i] != '\0' && n > i)
 	{
-		if (*ptr >= 'A' && *ptr <= 'Z')
-		{
-			*ptr = *ptr + ('a' - 'A');
-		}
-		ptr++;
+		dest[i] = src[i];
+		i++;
 	}
-	return (str);
+	while (n > i)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }
 
-/*int main() {
-	char str[] = "Hola, Mundo!";
-	char* lower_str = ft_strlowcase(str);
-	printf("%s\n", lower_str);  // Imprime "hola, mundo!"
-	return 0;
+/*int main(void){
+    char origen[] = "Hola, Mundo!";
+    char destino[20];
+
+    printf("Origen: %s\n", origen);
+
+    ft_strncpy(destino, origen, 7);
+
+    printf("Destino: %s\n", destino);
 }*/
