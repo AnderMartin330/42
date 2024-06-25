@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andemart <andemart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/20 10:50:34 by andemart          #+#    #+#             */
-/*   Updated: 2024/06/20 16:43:27 by andemart         ###   ########.fr       */
+/*   Created: 2024/06/19 14:09:04 by andemart          #+#    #+#             */
+/*   Updated: 2024/06/20 16:43:19 by andemart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 
-char	*ft_strupcase(char *str)
+char	*ft_strcpy(char *dest, char *src, unsigned int n)
 {
-	char	*ptr;
+	unsigned int		i;
 
-	*ptr = str;
-	while (*ptr != '\0')
+	i = 0;
+	while (src[i] != '\0' && n > i)
 	{
-		if (*ptr >= 'a' && *ptr <= 'z')
-		{
-			*ptr = *ptr - ('a' - 'A');
-		}
-		ptr++;
+		dest[i] = src[i];
+		i++;
 	}
-	return (str);
+	dest[i] = '\0';
+	return (dest);
 }
 
-/*int main() {
-	char str[] = "hola, mundo!";
-	char* upper_str = ft_strupcase(str);
-	printf("%s\n", upper_str);  // Imprime "HOLA, MUNDO!"
-	return 0;
+/*int main(void){
+    char origen[] = "Hola, Mundo!";
+    char destino[20];
+
+    printf("Origen: %s\n", origen);
+
+    ft_strcpy(destino, origen, 6);
+
+    printf("Destino: %s\n", destino);
 }*/

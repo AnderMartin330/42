@@ -6,54 +6,45 @@
 /*   By: andemart <andemart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 14:21:29 by andemart          #+#    #+#             */
-/*   Updated: 2024/06/23 14:46:32 by andemart         ###   ########.fr       */
+/*   Updated: 2024/06/20 16:44:22 by andemart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//#include <unistd.h>
 
-void	ft_putchar(char c)
+static	void	print_hex(int np)
 {
-	write(1, &c, 1);
-}
+	char	*hex;
 
-void	ft_convert_hexa(unsigned char c)
-{
-	char	*hexabase;
-
-	hexabase = "0123456789abcdef";
-	if (c >= 16)
+	hex = "0123456789abcdef";
+	if (np > 16)
 	{
-		ft_putchar(hexabase[c / 16]);
-		ft_putchar(hexabase[c % 16]);
+		print_hex(np / 10);
+		print_hex(np % 10);
 	}
 	else
-	{
-		ft_putchar('0');
-		ft_putchar(hexabase[c]);
-	}
+		write(1, &hex[np], 1);
 }
 
 void	ft_putstr_non_printable(char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i])
 	{
-		if (str[i] < 32 || str[i] > 126)
+		if ((str[i] <= 31 && str[i] >= 0) || str[i] == 127)
 		{
-			ft_putchar('\\');
-			ft_convert_hexa(str[i]);
+			write(1, "\\", 1);
+			if (str[i] < 16)
+				write(1, "0", 1);
+			print_hex(str[i]);
 		}
 		else
-		{
-			ft_putchar(str[i]);
-		}
-		i++;
+			write(1, &str[i], 1);
+		i += 1;
 	}
 }
-
 /*int main(void) {
 	const char str[] = "Coucou\ntu vas bien ?";
 

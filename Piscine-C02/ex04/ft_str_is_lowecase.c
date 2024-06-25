@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
+/*   ft_str_is_lowecase.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andemart <andemart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/19 16:12:48 by andemart          #+#    #+#             */
-/*   Updated: 2024/06/20 16:43:25 by andemart         ###   ########.fr       */
+/*   Created: 2024/06/19 16:05:37 by andemart          #+#    #+#             */
+/*   Updated: 2024/06/20 16:43:24 by andemart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <unistd.h>
 //#include <stdio.h>
 
-int	ft_str_is_uppercase(char *str)
+int	ft_str_is_lowercase(char *str)
 {
 	while (*str != '\0')
 	{
-		if (*str < 'A' || *str > 'Z')
+		if (*str < 'a' || *str > 'z')
 		{
 			return (0);
 		}
