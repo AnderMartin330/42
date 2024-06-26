@@ -14,7 +14,7 @@
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	char	*sbstr;
+	char	*beginning;
 	char	*pattern;
 
 	if (*to_find == '\0')
@@ -23,11 +23,11 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	while (*str != '\0')
 	{
-		sbstr = str;
+		beginning = str;
 		pattern = to_find;
-		while (*sbstr != '\0' && *pattern != '\0' && *sbstr == *pattern)
+		while (*beginning != '\0' && *pattern != '\0' && *beginning == *pattern)
 		{
-			sbstr++;
+			beginning++;
 			pattern++;
 		}
 		if (*pattern == '\0')
@@ -36,7 +36,7 @@ char	*ft_strstr(char *str, char *to_find)
 		}
 		str++;
 	}
-	return (NULL);
+	return (0);
 }
 
 /*int 	main(void) 
@@ -45,7 +45,7 @@ char	*ft_strstr(char *str, char *to_find)
     char to_find[] = "o";
     char *result = ft_strstr(str, to_find);
 
-    if (result != NULL) {
+    if (result != 0) {
         printf("La subcadena se encontró: %s\n", result);
     } else {
         printf("La subcadena no se encontró.\n");

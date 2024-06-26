@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 //#include <stdio.h>
+//#include <unistd.h>
 
 char	*ft_strncat(char *dest, char *src, int nb)
 {
@@ -23,7 +24,7 @@ char	*ft_strncat(char *dest, char *src, int nb)
 	{
 		a++;
 	}
-	while (src[b] != '\0' && b < nb - 1)
+	while (src[b] != '\0' && b < nb)
 	{
 		dest[a] = src[b];
 		b++;
@@ -38,6 +39,6 @@ char	*ft_strncat(char *dest, char *src, int nb)
 	char	dest[15] = "Hola";
 	char	src[] = "Mundo";
 	
-	ft_strncat(dest, src, 4);
+	ft_strncat(dest, src, 3);
 	write(1, &dest, sizeof(dest));
 }*/
